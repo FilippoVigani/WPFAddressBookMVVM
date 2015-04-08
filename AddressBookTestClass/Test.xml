@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ArrayOfContact xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Contact Name="Paolo Tesla" Number="2131234" Email="pipo@hot.it" />
+  <Contact Name="Marco Nani" Number="23423432" Email="pipo@hot.it" />
+  <Contact Name="Tonio Cartonio" Number="456456456" Email="psadfo@hot.it" />
+  <Contact Name="Tornio Ritornio" Number="234234322" Email="pasdfpo@hot.it" />
+  <Contact Name="Giovanni Muciaccia" Number="2546432" Email="sadfo@hot.it" />
+  <Contact Name="Albus Silente" Number="23567567432" Email="sadfpo@hot.it" />
+  <Contact Name="Antonio Pedina" Number="23094239" Email="pippo@egeg.it" />
+  <Contact Name="Alberto Culaperto" Number="234287682" Email="pasdfpo@hot.it" />
+  <Contact Name="Andrea Pinni" Number="23445632" Email="asdfo@hot.it" />
+  <Contact Name="Riccardo Fallo" Number="23952432" Email="psadfpo@hot.it" />
+  <Contact Name="Paolo Sinni" Number="2342234" Email="asdfpo@hot.it" />
+  <Contact Name="Paolo Creta" Number="2345675672" Email="pifds@hot.it" />
+  <Contact Name="Dennis Spart" Number="234857332" Email="pfdso@hot.it" />
+  <Contact Name="Luca Lock" Number="234345432" Email="psdafo@hot.it" />
+  <Contact Name="Massimo Minimo" Number="23445645872" Email="pipo@hot.it" />
+  <Contact Name="Paola Miraggio" Number="2345432" Email="pdsfgo@hot.it" />
+  <Contact Name="Veronica Supersonica" Number="234234532" Email="pasdfo@hot.it" />
+  <Contact Name="Matilde Matti" Number="23445732" Email="pippo@hot.it" />
+  <Contact Name="Bianca Neve" Number="23434572" Email="pippo@hot.it" />
+</ArrayOfContact>
