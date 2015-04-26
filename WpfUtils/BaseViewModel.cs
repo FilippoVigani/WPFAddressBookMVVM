@@ -1,9 +1,6 @@
 ﻿namespace WpfCommonLibrary
 {
     #region Usings
-
-    using CommonExtensions;
-    using FluentChecker;
     using System;
     using System.ComponentModel;
     using System.Diagnostics.CodeAnalysis;
@@ -15,6 +12,7 @@
     /// <summary>
     /// Common class inherited by View Models to use common helpers methods. 
     /// </summary>
+    [Serializable]
     public abstract class BaseViewModel : INotifyPropertyChanged
     {
         #region Events
@@ -35,9 +33,9 @@
         [SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
         protected void Notify(Expression<Func<object>> propertyExpression)
         {
-            Check.IfIsNull(propertyExpression).Throw<ArgumentException>(() => propertyExpression);
-
-            Notify(propertyExpression.GetMemberName());
+            if (propertyExpression == null)
+                throw new ArgumentException();
+            Notify((propertyExpression.Body as MemberExpression ?? ((UnaryExpression)propertyExpression.Body).Operand as MemberExpression).Member.Name);
         }
 
         /// <summary>
@@ -49,7 +47,8 @@
                 "Unfortunately there's no other way to use this attribute, but to implement a default parameter.")]
         protected void Notify([CallerMemberName] string propertyName = null)
         {
-            Check.IfIsNullOrWhiteSpace(propertyName).Throw<ArgumentException>(() => propertyName);
+            if (String.IsNullOrWhiteSpace(propertyName))
+                throw new ArgumentException();
 
             if (PropertyChanged == null) return;
 
@@ -73,7 +72,8 @@
         protected bool SetProperty<TProperty>(ref TProperty property, TProperty value,
             [CallerMemberName] String propertyName = null)
         {
-            Check.IfIsNullOrWhiteSpace(propertyName).Throw<ArgumentException>(() => propertyName);
+            if (String.IsNullOrWhiteSpace(propertyName))
+                throw new ArgumentException();
 
             if (Equals(property, value)) return false;
 

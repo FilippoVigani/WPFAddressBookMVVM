@@ -8,7 +8,6 @@ namespace WpfCommonLibrary
 {
     #region Usings
 
-    using FluentChecker;
     using System;
     using System.Windows.Input;
 
@@ -53,7 +52,8 @@ namespace WpfCommonLibrary
         /// <param name="canExecuteFunc"> The can execute function. </param>
         public Command(Action<object> executeAction, Func<object, bool> canExecuteFunc)
         {
-            Check.IfIsNull(executeAction).Throw<ArgumentNullException>(() => executeAction);
+            if (executeAction == null)
+                throw new ArgumentException();
 
             ExecuteAction = executeAction;
             CanExecuteFunc = canExecuteFunc;

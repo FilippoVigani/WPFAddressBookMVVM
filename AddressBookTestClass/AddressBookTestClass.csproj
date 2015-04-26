@@ -101,13 +101,13 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\WpfUtils\WpfUtils.csproj">
-      <Project>{07B4D2EF-9087-457A-AC56-CD5C5D5E420A}</Project>
-      <Name>WpfUtils</Name>
-    </ProjectReference>
+    <Resource Include="Test.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Test.xml" />
+    <ProjectReference Include="..\..\WpfUtils\WpfUtils.csproj">
+      <Project>{07b4d2ef-9087-457a-ac56-cd5c5d5e420a}</Project>
+      <Name>WpfUtils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
