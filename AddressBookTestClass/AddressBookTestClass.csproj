@@ -104,7 +104,7 @@
     <Resource Include="Test.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\WpfUtils\WpfUtils.csproj">
+    <ProjectReference Include="..\WpfUtils\WpfUtils.csproj">
       <Project>{07b4d2ef-9087-457a-ac56-cd5c5d5e420a}</Project>
       <Name>WpfUtils</Name>
     </ProjectReference>
